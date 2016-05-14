@@ -48,7 +48,7 @@
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                ga('create', '{{ GOOGLE_ANALYTICS_ID }}', '{{ GOOGLE_ANALYTICS_SITENAME }}');
+                ga('create', '{{ GOOGLE_ANALYTICS_ID }}', 'auto');
                 ga('send', 'pageview');
 
               </script>
@@ -123,10 +123,7 @@
           <div class="seven columns left-center">
 
                    <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
+                    Creared by dav@2016 and Proudly powered by <a href="http://getpelican.com/">Pelican</a>
                     </address>
           </div>
 
@@ -159,7 +156,7 @@
     </div>
 
 
-{% include 'disqus_script.html' %}
+<!-- {% include 'disqus_script.html' %} -->
 {% include 'piwik.html' %}
   <script src="{{ SITEURL }}/theme/js/libs/jquery-1.9.1.min.js"></script>
   <script src="{{ SITEURL }}/theme/js/libs/gumby.min.js"></script>
