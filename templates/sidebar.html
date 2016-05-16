@@ -1,6 +1,6 @@
 <div class="three columns">
 
-<h4>Pages</h4>
+<!-- <h4>方位</h4>
 
  <ul>
   {% for title, link in MENUITEMS %}
@@ -17,9 +17,9 @@
       {% endfor %}
     {% endif %}
   {% endif %}
-  </ul>
+  </ul> -->
 
-<h4>Categories</h4>
+<h4>分类</h4>
 {% if categories %}
 <ul class="blank">
 	{% for cat, null in categories %}
@@ -29,7 +29,7 @@
 {% endif %}
 
 
-<h4>Tags</h4>
+<h4>标签</h4>
 {% if tags %}
 	<ul class="blank">
 	{% for tag in tag_cloud %}
@@ -41,7 +41,7 @@
 
 {% if SOCIAL %}
 <nav class="widget">
-  <h4>Social</h4>
+  <h4>about me</h4>
   <ul class="blank">
   {% for name, url in SOCIAL %}
     <li><a href="{{ url|e }}">{{ name }}</a></li>

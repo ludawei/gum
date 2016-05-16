@@ -1,58 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Archives for {{ SITENAME }}</h1>
 
-<dl>
-{% for article in dates %}
-    <dt>{{ article.locale_date }}</dt>
-    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-{% endfor %}
-</dl>
+<div class="row">
+     <div class="eleven columns">
+       &nbsp;&nbsp;<h2>归档</h2>
 
+       <dl>
+       {% for article in dates %}
+           <dd>{{ article.locale_date }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+       {% endfor %}
+       </dl>
 
-<!-- JiaThis Button BEGIN -->
-<hr/>
-<aside>
-<nav>
-<div class="jiathis_style">
-	<span class="jiathis_txt">分享到：</span>
-	<a class="jiathis_button_tools_1"></a>
-	<a class="jiathis_button_tools_2"></a>
-	<a class="jiathis_button_tools_3"></a>
-	<a class="jiathis_button_tools_4"></a>
-	<a href="http://www.jiathis.com/share?uid=2003036" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-	<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript">
-var jiathis_config = {data_track_clickback:'true'};
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2003036" charset="utf-8"></script>
-</aside>
-</nav>
-<!-- JiaThis Button END -->
+     </div><!-- /.eleven.columns -->
 
-
-<!-- Duoshuo Comment Begin-->
-{% if DUOSHUO_SITENAME %}
-<aside>
-<nav>
-<div class="comments">
-<div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"{{ DUOSHUO_SITENAME }}"};
-(function() {
-var ds = document.createElement('script');
-ds.type = 'text/javascript';ds.async = true;
-ds.src = 'http://static.duoshuo.com/embed.js';
-ds.charset = 'UTF-8';
-(document.getElementsByTagName('head')[0]
- || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-<noscript>Please enable JavaScript to view the comments.</noscript>
-</nav>
-</aside>
-{% endif %}
-<!-- Duoshuo Comment End-->
-
+  {% include 'sidebar.html' %}
+</div><!-- /.row -->
 {% endblock %}
