@@ -8,9 +8,9 @@
 
 
             <header>
-              <h2 class="entry-title">
+              <h3 class="entry-title">
                 <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                   title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                   title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
            {% import 'translations.html' as translations with context %}
            {{ translations.translations_for(article) }}
             </header>
@@ -19,10 +19,10 @@
                 {{ article.locale_date }}
               </abbr>
               {% if article.authors %}
-              <address class="vcard author">By
-              {% for author in article.authors|sort %}
-                <a class="url fn" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
-              {% endfor %}
+              <address class="vcard author">
+              <!-- {% for author in article.authors|sort %}
+              {{ author }}
+              {% endfor %} -->
               </address>
               {% endif %}
             </footer><!-- /.post-info -->
